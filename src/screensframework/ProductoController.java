@@ -149,11 +149,14 @@ public class ProductoController implements Initializable, ControlledScreen {
                         TableCell cell = new TableCell(){
                             @Override
                             protected void updateItem(Object t, boolean bln) {
+                                //Error 
                                 if(t != null){
                                     super.updateItem(t, bln);
-                                    System.out.println(t);
                                     setText(t.toString());
                                     setAlignment(Pos.CENTER); //Setting the Alignment
+                                }
+                                else{
+                                    setText(null);
                                 }
                             }
                         };
@@ -393,7 +396,7 @@ public class ProductoController implements Initializable, ControlledScreen {
                    
                     row.add(rs.getString(i));
                 }
-
+                
                 producto.addAll(row);
             }
             tablaProducto.setItems(producto);
