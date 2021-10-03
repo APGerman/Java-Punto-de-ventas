@@ -20,7 +20,7 @@ import javax.swing.JOptionPane;
 import screensframework.DBConnect.DBConnection;
 import org.apache.commons.codec.digest.DigestUtils;
 
-public class RegistroController implements Initializable, ControlledScreen {
+public class  RegistroController implements Initializable, ControlledScreen {
     
     ScreensController controlador;
     private Validaciones validation = new Validaciones();

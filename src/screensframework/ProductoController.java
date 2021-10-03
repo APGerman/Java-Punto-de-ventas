@@ -58,7 +58,8 @@ public class ProductoController implements Initializable, ControlledScreen {
     public void initialize(URL url, ResourceBundle rb) {
         
         this.cargarDatosTabla();
-        
+        //Error btn AddProducto venia activado por default
+        btAddProducto.setDisable(true);
         btEliminarProducto.setDisable(true);
         btModificarProducto.setDisable(true);
         btEliminarProducto.setStyle("-fx-background-color:grey");
@@ -281,7 +282,6 @@ public class ProductoController implements Initializable, ControlledScreen {
             estado.setInt(3, indiceCategoria);
             estado.setInt(4, indiceMarca);
             
-            //error n no estaba definida
             int n  = estado.executeUpdate();
             
             if (n > 0) {

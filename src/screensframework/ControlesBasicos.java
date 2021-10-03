@@ -15,7 +15,7 @@ public class ControlesBasicos {
     
     public void salirSistema() {
         int pregunta = JOptionPane.showConfirmDialog(null, "Realmente desea salir del programa?");
-        //Error tipo de dato yes no existe
+        //Error tipo de dato (yes) no existe
         if (pregunta == JOptionPane.YES_OPTION) {
             Platform.exit();
         } 
